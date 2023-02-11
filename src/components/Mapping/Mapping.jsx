@@ -4,7 +4,9 @@ function Mapping(props) {
     <div className={props.class}>
       {props.list &&
         props.list.map((oneInList, index) => (
-          <p key={props.list[index]}>{oneInList}</p>
+          <p key={props.list[index]} className={props.classElement}>
+            {oneInList}
+          </p>
         ))}
     </div>
   )

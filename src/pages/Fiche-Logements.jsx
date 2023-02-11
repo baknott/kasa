@@ -2,6 +2,7 @@ import Header from '../components/Header/Header'
 import Banner from '../components/Banner/Banner'
 import Footer from '../components/Footer/Footer'
 import Mapping from '../components/Mapping/Mapping'
+import StarRating from '../components/Rating/Rating'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import data from '../Datas/data'
@@ -25,30 +26,37 @@ function Fiche() {
       />
       <div className="flexHrz spaBetw">
         <div className="leftFiche">
-          <h1>{logement.title}</h1>
-          <h5>{logement.location}</h5>
-          <Mapping list={logement.tags} class="flexHrz spaAround" />
+          <h1 className="logementTitle">{logement.title}</h1>
+          <h5 className="location">{logement.location}</h5>
+          <Mapping
+            list={logement.tags}
+            class="flexHrz spaAround boxTags"
+            classElement="tags"
+          />
         </div>
         <div className="rightFiche">
-          <div className="owner">
-            <div>{logement.host?.name}</div>
+          <div className="owner spaAround">
+            <div className="ownerName">{logement.host?.name}</div>
             <img
               src={logement.host?.picture}
               alt={logement.host?.name}
               className="ownerImg"
             />
           </div>
-          <div className="rating">note : {logement.rating}</div>
+          <StarRating rating={logement.rating} />
         </div>
       </div>
-      <div className="flexHrz">
+      <div className="flexHrz spaBetw">
         <div className="boxInfo">
-          <h4 className="boxTitle">Description</h4>
-          <div className="boxText">{logement.description}</div>
+          <div className="boxTitle">Description</div>
+          <div className="boxText greyBackground">{logement.description}</div>
         </div>
-        <div>
-          <h4>Equipements</h4>
-          <Mapping list={logement.equipments} />
+        <div className="boxInfo">
+          <div className="boxTitle">Equipements</div>
+          <Mapping
+            list={logement.equipments}
+            class="boxText greyBackground listLineHeight"
+          />
         </div>
       </div>
       <Footer />

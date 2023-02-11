@@ -1,10 +1,16 @@
 /*Body*/
 @font-face {
-    font-family: Montserrat;
+    font-family: MontserratM;
     src: url(fonts/Montserrat-Medium.ttf);
 }
+@font-face {
+    font-family: MontserratR;
+    src: url(fonts/Montserrat-Regular.ttf);
+}
 body{
-    font-family: Montserrat;
+    font-family: MontserratR;
+    position: absolute;
+    padding-left: 50px;
 }
 /*Footer*/
 .footer{
@@ -19,6 +25,10 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+}
+.liens{
+    color: #FF6060;
 }
 nav{
     width: 20%;
@@ -37,8 +47,17 @@ nav{
     border-radius: 25px;
     opacity: 80%;
     mix-blend-mode: darken;
+    object-fit: cover;
 }
 /*Home*/
+.logementTitle{
+    font-size: 36px;
+    color: #FF6060;
+}
+.location{
+    font-size: 18px;
+    color: #FF6060;
+}
 .greyBackground{
     background: #F7F7F7;
 }
@@ -86,6 +105,22 @@ li{
     z-index: 3;
 }
 /*Fiche Logement*/
+.boxTags{
+    margin-left: -25px;
+}
+.tags{
+    font-family: MontserratR;
+    background: #FF6060;
+    border-radius: 10px;
+    color: white;
+    min-width: 120px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .flexHrz{
     display: flex;
     
@@ -101,6 +136,10 @@ li{
 .owner{
     display: flex;
 }
+.ownerName{
+    font-size: 18px;
+    color: #FF6060;
+}
 .ownerImg{
     border-radius: 100%;
     width: 64px;
@@ -111,15 +150,36 @@ li{
 
 }
 .boxTitle{
+    font-family: MontserratM;
+    font-size: 18px;
     display: flex;
     height: 52px;
+    width: 582px;
     background: #FF6060;
     border-radius: 10px;
     color: white;
     text-align: left;
     align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: absolute;
 
 }
 .boxText{
+    font-family: MontserratR;
+    font-size: 18px;
+    margin-top: 25px;
+    padding-top: 50px;
     height: 249px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    color: #FF6060;
+    width: 582px;
+}
+
+.listLineHeight{
+    line-height: 10px;
+
 }
