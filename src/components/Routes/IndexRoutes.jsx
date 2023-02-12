@@ -12,7 +12,7 @@ function IndexRoutes() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/logement/:id" element={<Fiche />} />
         <Route exact path="/a-propos" element={<APropos />} />
-        <Route exact path="/404" element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   )

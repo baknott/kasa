@@ -1,5 +1,5 @@
 import Header from '../components/Header/Header'
-import Banner from '../components/Banner/Banner'
+import Carousel from '../components/Carousel/Carousel'
 import Footer from '../components/Footer/Footer'
 import Mapping from '../components/Mapping/Mapping'
 import StarRating from '../components/Rating/Rating'
@@ -19,11 +19,7 @@ function Fiche() {
   return (
     <div>
       <Header />
-      <Banner
-        src={logement.cover}
-        alt="photo de couverture du logement"
-        class="banner"
-      />
+      <Carousel pictures={logement.pictures} />
       <div className="flexHrz spaBetw">
         <div className="leftFiche">
           <h1 className="logementTitle">{logement.title}</h1>
