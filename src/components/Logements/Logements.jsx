@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 function ListeLogements() {
   return (
-    <div className="greyBgListeLogement">
       <ul className="listeLogements">
         {Logements.map((logement) => (
           <li key={`${logement.id}`} className="caseLogement">
@@ -15,7 +14,6 @@ function ListeLogements() {
           </li>
         ))}
       </ul>
-    </div>
   )
 }
 

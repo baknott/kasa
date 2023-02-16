@@ -3,6 +3,7 @@ import Carousel from '../components/Carousel/Carousel'
 import Footer from '../components/Footer/Footer'
 import Mapping from '../components/Mapping/Mapping'
 import StarRating from '../components/Rating/Rating'
+import Collapse from '../components/Collapse/Collapse'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import data from '../Datas/data'
@@ -24,11 +25,7 @@ function Fiche() {
         <div className="leftFiche">
           <h1 className="logementTitle">{logement.title}</h1>
           <h5 className="location">{logement.location}</h5>
-          <Mapping
-            list={logement.tags}
-            class="flexHrz spaAround boxTags"
-            classElement="tags"
-          />
+          <Mapping list={logement.tags} class="flexHrz" classElement="tags" />
         </div>
         <div className="rightFiche">
           <div className="owner spaAround">
@@ -42,19 +39,25 @@ function Fiche() {
           <StarRating rating={logement.rating} />
         </div>
       </div>
-      <div className="flexHrz spaBetw">
-        <div className="boxInfo">
-          <div className="boxTitle">Description</div>
-          <div className="boxText greyBackground">{logement.description}</div>
-        </div>
-        <div className="boxInfo">
-          <div className="boxTitle">Equipements</div>
-          <Mapping
-            list={logement.equipments}
-            class="boxText greyBackground listLineHeight"
-          />
-        </div>
+      <div className="flexHrz spaBetw ficheCollapse">
+        <Collapse
+          title="Description"
+          content={logement.description}
+          collapseSize="collapseHalf"
+        />
+        <Collapse
+          title="Equipement"
+          content={
+            <Mapping
+              list={logement.equipments}
+              class="listBloc"
+              classElement="listLineHeight"
+            />
+          }
+          collapseSize="collapseHalf"
+        />
       </div>
+
       <Footer />
     </div>
   )

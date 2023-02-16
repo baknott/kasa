@@ -11,7 +11,12 @@ function StarRating(props) {
   return (
     <div>
       {stars.map((star, index) => (
-        <img key={index} src={star} alt={`star-${index + 1}`} />
+        <img
+          key={index}
+          src={star}
+          alt={`star-${index + 1}`}
+          className="ratingStar"
+        />
       ))}
     </div>
   )
