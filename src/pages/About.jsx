@@ -4,11 +4,17 @@ import Banner from '../components/Banner/Banner'
 import BannerImg from '../images/banner1.png'
 import Collapse from '../components/Collapse/Collapse'
 
-function APropos() {
+function About() {
   return (
-    <div>
+    <div className="main">
       <Header />
-      <Banner src={BannerImg} alt="image de montagne" class="banner" />
+      <Banner
+        src={BannerImg}
+        alt="image de montagne"
+        class="banner"
+        classImg="bannerImg"
+      />
+
       <Collapse
         title="Fiabilité"
         content="Les annonces postées sur Kasa garantissent une fiabilité totale. 
@@ -46,4 +52,4 @@ function APropos() {
   )
 }
 
-export default APropos
+export default About

@@ -6,9 +6,16 @@ import BannerImg from '../images/banner2.png'
 
 function Home() {
   return (
-    <div>
+    <div className="main">
       <Header />
-      <Banner src={BannerImg} alt="image de montagne" class="banner" />
+      <Banner
+        src={BannerImg}
+        alt="image de montagne"
+        class="banner"
+        classImg="bannerImg"
+        classTitle="bannerTitleHome"
+        text="Chez vous, partout et ailleurs"
+      />
       <ListeLogements />
       <Footer />
     </div>

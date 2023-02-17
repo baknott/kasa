@@ -9,29 +9,31 @@
 }
 body{
     font-family: MontserratR;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2%;
     margin: 0%;
+    padding: 0%;
 }
 ul{
     padding: 0%;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
 }
 /*Footer*/
 .footer{
     width: 100%;
     text-align: center;
-    padding: 8%;
     padding-top: 5%;
     padding-bottom: 5%;
-    margin-left: -10%;
     background-color: black;
     color: white;
 }
 /*Header*/
 .header{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,6 +43,11 @@ ul{
 }
 .liens{
     color: #FF6060;
+}
+.lienError{
+    color: #FF6060;
+    text-decoration: underline;
+    font-size: 18px;
 }
 .liens:hover{
     text-decoration: underline;
@@ -57,12 +64,28 @@ nav{
 }
 /*Bannière*/
 .banner{
-    width: 100%;
+    width: 90%;
     height: 223px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.bannerImg{
+    width: 100%;
+    height: 100%;
     border-radius: 25px;
-    opacity: 80%;
+    opacity: 100%;
     mix-blend-mode: darken;
     object-fit: cover;
+    
+}
+.bannerTitleHome{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+
 }
 /*Home*/
 .logementTitle{
@@ -73,8 +96,7 @@ nav{
 .listeLogements{
     background: #F7F7F7;
     border-radius: 25px;
-    max-width: 1200px;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -100,7 +122,6 @@ nav{
 }
 .gradient{
     box-shadow: inset 0em -3em 5em black;
-    /*background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);*/
     width: 100%;
     height: 100%;
     position: absolute;
@@ -121,6 +142,7 @@ nav{
 /*Fiche Logement*/
 .blocPictures{
     position: relative;
+    width: 90%;
 }
 .location{
     font-size: 18px;
@@ -166,6 +188,7 @@ nav{
     align-items: center;
 }
 .infosLogement{
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -220,8 +243,7 @@ nav{
 .collapseFull{
     display: flex;
     flex-direction: column;
-    width: 1100px;
-    align-self: start;
+    width: 85%;
     margin-top: 1.5%;
     margin-bottom: 1.5%;
 }
@@ -255,6 +277,7 @@ nav{
     border-radius: 10px;
     color: #FF6060;
 }
+
 .listLineHeight{
     line-height: 5px;
 
@@ -263,6 +286,21 @@ nav{
     margin-top: -10px;
 }
 
+/*404*/
+.error{
+    width: 100%;
+    text-align: center;
+    color: #FF6060;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.errorImg{
+    width: 40%;
+    height: auto;
+    margin-bottom: 5%;
+}
+
+/*mobile*/
 @media only screen and (max-width: 768px){
     body{
         padding-right: 1%;
@@ -277,6 +315,9 @@ nav{
         width: 100%;
         padding: 1.5%;
         margin-left: -2%;
+    }
+    .bannerTitleHome{
+        font-size: 25px;    
     }
     .listeLogements{
         width: 100%;

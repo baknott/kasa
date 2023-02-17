@@ -18,7 +18,7 @@ function Fiche() {
   }, [id])
 
   return (
-    <div>
+    <div className="main">
       <Header />
       <Carousel pictures={logement.pictures} />
       <div className="infosLogement">
