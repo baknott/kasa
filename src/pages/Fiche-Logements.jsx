@@ -21,14 +21,14 @@ function Fiche() {
     <div>
       <Header />
       <Carousel pictures={logement.pictures} />
-      <div className="flexHrz spaBetw">
+      <div className="infosLogement">
         <div className="leftFiche">
           <h1 className="logementTitle">{logement.title}</h1>
           <h5 className="location">{logement.location}</h5>
           <Mapping list={logement.tags} class="flexHrz" classElement="tags" />
         </div>
         <div className="rightFiche">
-          <div className="owner spaAround">
+          <div className="owner">
             <div className="ownerName">{logement.host?.name}</div>
             <img
               src={logement.host?.picture}
@@ -39,7 +39,7 @@ function Fiche() {
           <StarRating rating={logement.rating} />
         </div>
       </div>
-      <div className="flexHrz spaBetw ficheCollapse">
+      <div className="infosLogement ficheCollapse">
         <Collapse
           title="Description"
           content={logement.description}

@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import LeftArrow from '../../images/left-arrow.png'
 import RightArrow from '../../images/right-arrow.png'
+
 function Carousel(props) {
   const [currentIndex, setCurrentIndex] = useState(0)
+
   const previousImage = () =>
     setCurrentIndex(
       currentIndex === 0 ? props.pictures.length - 1 : currentIndex - 1
@@ -19,20 +21,22 @@ function Carousel(props) {
         alt="photos du logement"
         className="logementPictures"
       />
-      <div className="blocArrowsPictures spaBetw">
-        <img
-          src={LeftArrow}
-          alt="Fleche Gauche"
-          onClick={previousImage}
-          className="oneArrowPictures"
-        />
-        <img
-          src={RightArrow}
-          alt="Fleche Droite"
-          onClick={nextImage}
-          className="oneArrowPictures"
-        />
-      </div>
+      {props.pictures && props.pictures.length > 1 && (
+        <div className="blocArrowsPictures spaBetw">
+          <img
+            src={LeftArrow}
+            alt="Fleche Gauche"
+            onClick={previousImage}
+            className="oneArrowPictures"
+          />
+          <img
+            src={RightArrow}
+            alt="Fleche Droite"
+            onClick={nextImage}
+            className="oneArrowPictures"
+          />
+        </div>
+      )}
     </div>
   )
 }

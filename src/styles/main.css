@@ -15,16 +15,23 @@ body{
     padding-top: 2%;
     margin: 0%;
 }
+ul{
+    padding: 0%;
+}
 /*Footer*/
 .footer{
+    width: 100%;
     text-align: center;
-    padding: 5%;
+    padding: 8%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: -10%;
     background-color: black;
     color: white;
 }
 /*Header*/
 .header{
-    width: 1240px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +46,7 @@ body{
     text-decoration: underline;
 }
 nav{
-    width: 15%;
+    width: 175px;
     display: flex;
     justify-content: space-between;
     
@@ -50,7 +57,7 @@ nav{
 }
 /*Bannière*/
 .banner{
-    width: 1240px;
+    width: 100%;
     height: 223px;
     border-radius: 25px;
     opacity: 80%;
@@ -63,27 +70,26 @@ nav{
     color: #FF6060;
 }
 
-.caseLogement{
-    list-style-type: none;
-    position: relative;
-    margin-bottom: 10px;
-    height: 320px;
-    width: 320px;
-    border-radius: 10px;
-    margin-bottom: 5%;
-
-}
 .listeLogements{
     background: #F7F7F7;
     border-radius: 25px;
     max-width: 1200px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-top: 3%;
-    padding-right: 2%;
     
+}
+.caseLogement{
+    list-style-type: none;
+    position: relative;
+    height: 300px;
+    width: 28%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+
 }
 .imgLogement{
     width: 100%;
@@ -122,7 +128,7 @@ nav{
 }
 .logementPictures{
     height: 315px;
-    width: 1240px;
+    width: 100%;
     mix-blend-mode: normal;
     object-fit: cover;
     border-radius: 25px;
@@ -133,7 +139,7 @@ nav{
     position: absolute;
     top: 0px;
     height: 315px;
-    width: 1240px;
+    width: 100%;
     border-radius: 25px;
 }
 .oneArrowPictures{
@@ -159,6 +165,11 @@ nav{
     justify-content: center;
     align-items: center;
 }
+.infosLogement{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .flexHrz{
     display: flex;
     
@@ -172,12 +183,12 @@ nav{
     align-items: center;
 }
 .rightFiche{
-    border: solid yellow;
+    width: 20%;
 }
 .owner{
     display: flex;
-    border: solid black;
     width: 150px;
+    
 }
 .ownerName{
     font-size: 18px;
@@ -202,7 +213,7 @@ nav{
 .collapseHalf{
     display: flex;
     flex-direction: column;
-    width: 582px;
+    width: 49%;
     align-self: start;
 
 }
@@ -213,7 +224,6 @@ nav{
     align-self: start;
     margin-top: 1.5%;
     margin-bottom: 1.5%;
-    margin-left: 6.5%;
 }
 .collapse_header{
     width: 95%;
@@ -251,4 +261,56 @@ nav{
 }
 .listBloc{
     margin-top: -10px;
+}
+
+@media only screen and (max-width: 768px){
+    body{
+        padding-right: 1%;
+        padding-left: 2%;
+        padding-top: 5%;
+    }
+    .banner{
+        width: 100%;
+        height: 150px;
+    }
+    .footer{
+        width: 100%;
+        padding: 1.5%;
+        margin-left: -2%;
+    }
+    .listeLogements{
+        width: 100%;
+        flex-direction: column;
+        justify-content: none;
+        background: none;
+        margin: 0%;
+        
+    }
+    .caseLogement{
+        width: 100%;
+        height: 300px;
+    }
+    .infosLogement{
+        flex-direction: column;
+    }
+    .rightFiche{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .ratingStar{
+        order: -1;
+    }
+    .owner{
+        order: 1;
+    }
+    .ownerName{
+        align-self: center;
+    }
+    .collapseHalf{
+        margin-bottom: 5%;
+        width: 100%;
+    }
 }
