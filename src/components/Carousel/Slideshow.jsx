@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import LeftArrow from '../../images/left-arrow.png'
 import RightArrow from '../../images/right-arrow.png'
 
-function Carousel(props) {
+function Slideshow(props) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const previousImage = () =>
@@ -41,4 +41,4 @@ function Carousel(props) {
   )
 }
 
-export default Carousel
+export default Slideshow

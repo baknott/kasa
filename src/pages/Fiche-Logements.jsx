@@ -1,5 +1,5 @@
 import Header from '../components/Header/Header'
-import Carousel from '../components/Carousel/Carousel'
+import Slideshow from '../components/Carousel/Slideshow'
 import Footer from '../components/Footer/Footer'
 import Mapping from '../components/Mapping/Mapping'
 import StarRating from '../components/Rating/Rating'
@@ -20,7 +20,7 @@ function Fiche() {
   return (
     <div className="main">
       <Header />
-      <Carousel pictures={logement.pictures} />
+      <Slideshow pictures={logement.pictures} />
       <div className="infosLogement">
         <div className="leftFiche">
           <h1 className="logementTitle">{logement.title}</h1>
