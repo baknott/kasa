@@ -4,7 +4,7 @@ import logoR from '../../images/logo-red.png'
 function Header() {
   return (
     <div className="header">
-      <img src={logoR} alt="logo kasa rouge" />
+      <img src={logoR} alt="logo kasa rouge" className="logoHeader" />
       <nav>
         <Link to="/" className="liens">
           Accueil

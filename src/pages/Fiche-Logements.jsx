@@ -25,7 +25,11 @@ function Fiche() {
         <div className="leftFiche">
           <h1 className="logementTitle">{logement.title}</h1>
           <h5 className="location">{logement.location}</h5>
-          <Mapping list={logement.tags} class="flexHrz" classElement="tags" />
+          <Mapping
+            list={logement.tags}
+            class="flexHrz wrapTags"
+            classElement="tags"
+          />
         </div>
         <div className="rightFiche">
           <div className="owner">
